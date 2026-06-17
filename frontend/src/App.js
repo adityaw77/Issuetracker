@@ -9,8 +9,8 @@ import IssueTable from './component/IssueTable';//ticketform
 function App() {
   return (
     <div>
-   <IssueList/>
    <IssueTable/>
+   <IssueList/>
    </div>
 
   );

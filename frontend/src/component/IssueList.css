@@ -1,0 +1,80 @@
+.issue-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+}
+
+.issue-list h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.issue-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.issue-card h3 {
+    margin-top: 0;
+    color: #222;
+}
+
+.issue-card p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.status-open {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-in-progress {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-resolved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.issue-button {
+    margin-top: 15px;
+}
+
+.issue-button button {
+    padding: 6px 12px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.issue-button button:hover {
+    background-color: #e2e6ea;
+}
+
+.issue-button .delete-btn {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.issue-button .delete-btn:hover {
+    background-color: #721c24;
+    color: #fff;
+}

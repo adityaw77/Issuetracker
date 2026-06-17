@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import axios from 'axios';
-
+import './IssueList.css';
 function IssueList(){
     const[issues,setIssues]=useState([]);
 
@@ -17,7 +17,7 @@ function IssueList(){
         try{
             await axios.delete(`http://localhost:5001/api/issues/${id}`);
             //update State Immediately
-            setIssues(prevIssues=>prevIssues.filter(ticket=>ticket._id!==id));
+            setIssues(prevIssues=>prevIssues.filter(issue=>issue._id!==id));
         }catch(error){
             alert("error in deleteing the issue");
             console.log(error);
@@ -61,7 +61,7 @@ function IssueList(){
                         {issue.status}
                         </span>
                     </p>
-                    <div className="ticket-button">
+                    <div className="issue-button">
                         <button onClick={()=>updateStatus(issue._id,'In progress')}>In progress</button>
                         <button onClick={()=>updateStatus(issue._id,'Resolved')}>Resolved</button>
                         <button className="delete-btn"onClick={()=>deleteIssue(issue._id)}>Delete</button>

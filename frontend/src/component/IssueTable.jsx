@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import axios from 'axios';
+import './IssueTable.css';
 function IssueTable() {
     const [form,setForm]=useState({
         title:'',
@@ -34,13 +35,18 @@ const handleSubmit=async (e) => {
       <form onSubmit={handleSubmit}>
         Title: <input type="text" name="title"value={form.title} onChange={handleChange}/><br/>
         Description: <textarea name="description"value={form.description} onChange={handleChange}/><br/>
-        Due: <input type="text" name="due"value={form.due} onChange={handleChange}/><br/>
+        Due: <input type="number" name="due"value={form.due} onChange={handleChange}/><br/>
         Owner: <input type="text" name="owner"value={form.owner} onChange={handleChange}/><br/>
-        Priority: <select name="priority"value={form.priority} onChange={handleChange}>
-          <option>High</option>
-          <option>Medium</option>
-          <option>Low</option>
-        </select><br/>
+        Priority: <select
+  name="priority"
+  value={form.priority}
+  onChange={handleChange}
+>
+  <option value="">Select Priority</option>
+  <option value="High">High</option>
+  <option value="Medium">Medium</option>
+  <option value="Low">Low</option>
+</select><br/>
         <button type="submit" className="Submit">Submit</button>
       </form>
     </div>
